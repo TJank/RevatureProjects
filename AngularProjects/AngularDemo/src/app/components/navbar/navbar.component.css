@@ -1,0 +1,19 @@
+#footer, #banner {
+	text-align:center;
+}
+
+[id="banner"] > div {
+    height: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+[id="footer"] > div {
+    margin-top: 350px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.bg-custom {
+    background-color: lavenderblush;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Northern Grown</title>
+        <link rel="stylesheet" href="./public/stylesheets/login.css">
+        <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  rel="stylesheet"  type='text/css'>
+    </head>
+
+    <body>
+        <div class="container" id="mainContent">
+            <form class="loginForm" action="./FrontController" method="POST" >
+                <h1>Employee Login</h1>
+                <div class="textbox">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="textbox">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <input class="btn" type="submit" value="Sign In">
+            </form>
+        </div>
+    </body>
+
+</html>

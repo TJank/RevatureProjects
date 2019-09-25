@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Northern Grown</title>
+        <link rel="stylesheet" href="../public/stylesheets/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+    </head>
+
+    <body>
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Northern Grow</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active">Reimbursement Form</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hidden" href="pendingRequest.html">Pending Requests</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" id="employeeName" >Employee Name</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+        <div class="container">
+          <h3 class="pageTitle">Create a New Reimbursement Request</h3>
+
+          <h4>Event Info:</h4>
+
+          <form>
+            <!-- Form Row 1-->
+            <div class="form-row">
+              <div class="col">
+                <label for="eventType">Event Type:</label>
+                <select class="form-control" id="eventTypeSelect" name="eventTypeSelect" required>
+                    <option>Default</option>
+                  </select>
+              </div>
+              <div class="col">
+                  <label for="eventGradeType">Grade Type:</label>
+                <input type="text" class="form-control" placeholder="Grade Format" name="eventGradeType" readonly>
+              </div>
+              <div class="col">
+                  <label for="eventRate">Rate:</label>
+                  <input type="text" class="form-control" placeholder="Rate" name="eventRate" readonly>
+                </div>
+            </div>
+
+            <!-- Form Row 2-->
+            <div class="form-row">
+              <div class="col">
+                  <label for="eventLocation">Event Location:</label>
+                <input type="text" class="form-control" placeholder="Event Location" name="eventLocation" required>
+              </div>
+              <div class="col">
+                  <label for="eventStartDate">Start Date:</label>
+                <input type="date" class="form-control" name="eventStartDate" required>
+              </div>
+              <div class="col">
+                  <label for="eventStartTime">Start Time:</label>
+                  <input type="time" class="form-control" name="eventStartTime" required>
+              </div>
+              <div class="col">
+                  <label for="eventWorkMissed">Work Missed:</label>
+                <input type="text" class="form-control" placeholder="Specify Work Missed" name="eventWorkMissed" required>
+              </div>
+            </div>
+
+            <!-- Form Row 3-->
+            <div class="form-row">
+                <div class="col">
+                    <label for="eventDescription">Event Description:</label>
+                  <textarea type="text" class="form-control" placeholder="Event Discription" name="eventDescription" required></textarea>
+                </div>
+                <div class="col">
+                    <label for="eventCost">Event Cost:</label>
+                  <input type="number" class="form-control" name="eventCost" max="1000" placeholder="Event Cost" required>
+                </div>
+                <div class="col">
+                    <label for="eventProjectedReimbursement">Projected Reimbursement:</label>
+                  <input type="text" class="form-control" placeholder="Projected Reimbursement" name="eventProjectedReimbursement" readonly>
+                </div>
+              </div>
+
+              <!-- Form Row 4-->
+            <div class="form-row">
+              <div class="col">
+                  <label for="eventJustification">Justification:</label>
+                <textarea type="text" class="form-control" placeholder="Justification" name="eventJustification" required></textarea>
+              </div>            
+            </div>
+
+            <!-- Form Row 3-->
+            <div class="form-row">
+              <div class="col"></div>
+              <div class="col">
+                  <button style="width: 100%;" type="submit" class="btn btn-primary">Submit</button>
+              </div>
+              <div class="col"></div>
+            </div>
+          </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+</html>

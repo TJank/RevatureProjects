@@ -1,0 +1,78 @@
+Tables :
+
+    Account Table: 
+        ID
+        Login Username or email
+        Login password
+
+
+    Employee table - contains the employee's personal information 
+        Contains: 
+            ID - primary key
+            Name
+            Last Name
+            Reimbursement Amount ?
+            Position Level ID
+            Account ID
+            DepartmentHead ID to link an employee to who is above them?
+
+    JOIN TABLE OF Employee_Positions  
+
+    Employee Position table - contains information about the possible employee roles
+        e.g. ID = primary key, title = Benefits Coordinator / etc., and level = 1 for Benefits Coordinator to show this person is
+        at the hightest level while Employee would be at level 4?
+    
+
+    Tuition Reimbursement Request Table - contains all information about an employee's request to receive reimbursement for a course
+        or certification
+            ID - primary key
+            EmployeeID
+            Priority - whether if the request is urgent, finalized by Benefits Coordinator, NOTE- Just a boolean? urgent or not
+            Cost - cost of the course / certification
+            CourseTypeID 
+            Final Grade
+            CourseStart Date
+            Request Date
+            StatusID - whether if its "waiting", "started", "completed", approved, "rejected", etc. (the overall status of the course)
+            WaitingStatusID
+
+    Event Table-
+        ID
+        Type - "Certification Test", 
+        Grade Type - "P/F", 
+        ReimbursementAmount - 80%, 
+            
+    Reimbursement Status Table - contains the status of the reimbursement request
+        Contains: 
+            ID - primary key
+            Status - "depoHeadApproved", "BenCo Approved", 
+            Level? - 
+
+
+    
+
+
+        Contains: 
+            ID - primary key
+            Title - Benefits Coordinator, Department Head, etc.
+            Level? - 1 for Benefits Coordinator, 2 for Department Head, 3 for Direct Supervisor, and 4 for employee? and 5 for Manager? (one level above BenCo)
+
+
+
+
+    Course Type Table - contains the type of the courses available, certification, university, presentation, etc.
+    
+    Grade Table - contains the different type of possible grades?
+
+
+Questions for Christina: 
+
+    Should there be a way to create new employees with various roles?
+    Does each employee only have one 
+
+
+
+
+
+
+

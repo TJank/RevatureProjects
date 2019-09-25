@@ -1,0 +1,272 @@
+Control Flow of List Application
+
+
+
+while loop where if there is no currently logged in user we are in the loop
+
+    Create / Login Loop -
+    Prompt -
+
+
+    "Select an option:"
+    (1) Create User
+    (2) Login
+    (3) Exit
+    Enter a 1, 2, or 3 : (cursor points here)
+
+    If user inputs anything other 1, 2, or 3
+        Error Prompt - 
+        "Thats not 1, 2, or 3" 
+        and look back to top of loop
+
+    If user selects (1) -
+    Create user prompt
+
+        Create User Prompt - 
+            Username Prompt -
+                "Enter a username: " (cursor points here)
+                    if it is valid (longer than 3 characters)
+                        read the input and store as username
+                        THEN go to password prompt
+                    
+                    if INVALID -
+                    Prompt - 
+                    "Error, username must be 4 or more characters"
+                        then loop back to top of loop
+
+            Password Prompt - 
+                "Enter a password: " (cursor ponts here)
+                    if it is valid (longer than 5 characters)
+                        read the input and store as password
+                        Then create the user in database.
+                    
+                    if INVALID (< 6 characters) -
+                    Prompt - 
+                    "Error, password must be 6 or more characters"
+                        then loop back to top of loop
+        
+        If user is created then continue to top of loop
+    
+    If user selects (2) -
+    Login Prompt
+        
+        Login Prompt -
+            "Enter username: " (cursor points here)
+                When user inputs a username application sets it to a tempUsername variable
+            
+            "Enter password: " (cursor points here)
+                When user inputs a password application sets it to a tempPassword variable
+                    Then the application performs a query on database   
+                        If that user exits and passwords are the same:
+                            the user is then logged in
+                        
+                        If that user does not exist or that password doesnt match
+                            that user gets an error message:
+                                "Incorrect username or password"
+                                    then the application returns to top of loop
+
+        If User is returned and login variable is set to true, this exists this first main loop
+        and then the user moves to the main application loop
+
+Main Menu Loop :
+    as long as isLoggedIn variable is true and currentUser User object is NOT NULL the user can perform operations within the application
+
+    Main Menu Prompt -
+
+    User Option Loop FOR INT ONLY
+        "What would you like to do?"
+        "(1) View Lists."
+        "(2) Create a new list"
+        "(3) View Public lists"
+        "(4) Logout"
+        Enter a 1, 2, 3, or 4 : (cursor points here)
+
+        Application tests if user inputs 1, 2, or 3.
+
+            If not 1, 2, or 3 print out error
+                "Not a 1, 2, or 3, 4"
+                then application retruns to top of the loop
+
+        If (1) then the console prints the User's List Dashboard is printed into View
+            when user selects (1) the application retrieves all lists associated with that user and prints the title to console. 
+
+                "User Lists"
+                "1 - Bicep Workout"
+                "2 - Groceries"
+                "3 - ToDo"
+                "4 - Leg Workout"
+                "Select a list to perform actions on: " (cursor points here) 
+
+                    User input INT loop -- 
+                    
+                    Application creates a map of keys associated witht the individual User list items.
+                    application enters another loop to test if user has entered a number from the userList.id's greates and least values.
+                    
+                    If user enters an int:
+                        application tests it to make sure it is valid by using an if and checking the list id's for the greates and least vlues.
+                            if it is valid The user moves on to the List "list.Title" Dashboard
+
+                            if the number entered does not correspond with a list id, the application prints an error.
+                                "That list does not exist"
+                                then the application returns back to top of User's List Dashboard
+
+                    When user enters an int that corresponds to a list title:
+                        the console prints the list title and the associated list items / details to console. while printing options
+
+                        "Bicep Workout List"
+                        
+                        "Bicep curl"
+                        "Tricep pushdowns"
+                        "21's" 
+                        "Hammer curls"
+
+                        "Options: "
+                        "(1) Add item"
+                        "(2) Edit "
+                        "(3) Share My List!" / "(3) Make it private.. "
+                        "(4) Delete"
+                        "(5) Exit"
+                        "Select option: " (cursor points here) 
+
+                        Application reads the user's input and tests if user inputs 1, 2, 3, 4, or 5.
+
+                            If not 1, 2, 3, 4, or 5 print out error
+                                "Not a 1, 2, 3, 4, or 5"
+                                then application retruns to top of the loop
+
+                            If (1) the application prompts user to add a new list item
+                                "Enter new list item: " (cursor points here) 
+                                
+                                application reads the input and then creates a new list item with the associated list id
+                                application makes a new call to database with the current list id and user id
+                                the user is returned to the view list loop to view updated list with options
+
+                            If (2) the application prints out the list items with ints to select which list item to edit.
+                                the application also creates a map to keep track of the individual list items to be referenced 
+                                by the printed out number they will be associated with
+                                
+                                    "Bicep Workout List"
+                            
+                                    "(1) Bicep curl"
+                                    "(2) Tricep pushdowns"
+                                    "(3) 21's" 
+                                    "(4) Hammer curls"
+                                    "Select a list item to edit: " (cursor goes here)
+
+                                    application takes in user input and checks if it is a correct value compared to the map's keys.
+                                        If valid key:
+                                            Application then uses that value to retrieve the list item based off of that key
+                                                Application prompts user to add the new list item:
+                                                    "Enter new list item: " (cursor goes here)
+
+                                                    application takes in user input to temp variable 
+                                                    application then uses the temp variable to set the list item's name. 
+
+                                        If key is NOT valid: 
+                                            Application prints 
+                                                "List item doesn't exist"
+                                             and then application returns to the top of the loops
+
+
+                            If (3) the application will just update the list to be true OR make it false if it is already true
+                                application uses the current list to set the isSharable option to true
+                                OR 
+                                if already true and the console print option is "Make private.. " then the isSharable variable is set to false;
+                                then application returns to the top of the loop.
+
+                            If(4) the application will prompt user to confirm delete of list
+                                application enters "delete" loop
+                                    application prints to the console:
+                                        "(1) Confirm delete" 
+                                        "(2) Cancel"
+
+                                        application tests input to be only 1 or 2 and continues to prompt user if not 1 or 2
+                                            "Not 1 or 2"
+                                            returns to top of delete loop
+
+                                        if (1) then the application deletes the list from the database
+
+                                        if (2) then the application exits delete loop and returns to top of the list loop
+                                            which reprints the whole list and list items. 
+
+
+                            If (5) the application exits this view loop and returns to the main loop. DOES NOT GO BACK TO VIEW LOOP
+
+
+
+        If (2) then the user is prompted for a new list
+            the createNewUserList(User currentUser) function is called - currentUser is passed into function to pass a long the user id field.
+            The function prompts user for a new list item
+
+                New List Prompt -
+                    "Enter list title: " (cursor points here)
+
+                        input is set to a title variable
+                            the title variable is then used to create a new UserList with the user id as well
+                            the application then saves this new list to the database
+
+                        then the user is returned to the main menu prompt
+
+        If (3) then the user is moved to the list Dashboard and views all of the available "Sharable" lists
+        the application prints all lists to the console and waits for user to select one to view. The user then has the option 
+        to make that list one of theirs.
+
+            "Public Lists: "
+
+            "(1) Push Workout"
+            "(2) Necessities"
+            "(3) Best Playlist"
+
+            "Enter a list title to view details: " 
+            "(or type 'exit' to exit)" (cursor is here)
+
+            User enters a string
+            the application takes that in and compares that to the sharableList.getTitle()
+
+            If there is a match:
+                the console then prints out the list items and asks the user if they want to make it theirs too
+
+                "Push Workout details:"
+
+                "(1) Bench press"
+                "(2) Barbell Shoulder press"
+                "(3) Side lateral raise"
+                "(4) Push Ups"
+                "(5) Tricep pushdowns"
+
+                "Would you like to make this yours?"
+                "(1) Yes!"
+                "(2) No / go back"
+
+                the user is supposed to enter a number 1 or 2
+                the application takes in the input and validates that it is 1 or 2
+
+                    if (1) the application then makes an insert of the same list with the user id
+                        it also adds new list items that are related to this new list item. 
+
+                    if (2) the application just returns back to the view of all sharable lists
+
+
+
+
+        If (4) then the user is logged out of the application
+            Calls the Logout() function which:
+                "Logs" the user out by setting currentUser to null;
+                also makes the isLoggedIn variable to false
+
+                    these two operations should exit all main loops and close application nicely.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

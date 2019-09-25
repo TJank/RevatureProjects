@@ -1,0 +1,35 @@
+body {
+    background-color: #608097;
+}
+
+.form-row {
+    padding: 20px;
+}
+
+h4 {
+    padding: 15px;
+}
+
+.pageTitle {
+    text-align: center;
+    padding: 30px;
+}
+
+.tableDiv {
+    padding: 20px 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#welcomeMsg {
+    padding: 20px;
+}
+
+#userAmountSpan {
+    padding: 10px;
+    /* float: right; */
+    font-size: 50%;
+}
+

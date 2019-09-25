@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Northern Grown</title>
+        <link rel="stylesheet" href="../public/stylesheets/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Northern Grow</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="reimbursementForm.html">Reimbursement Form</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active hidden">Pending Requests</a>
+                    </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" id="employeeName" >Employee Name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Logout</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <p>This page will be used my upper management employees to view all pending requests that they need to approve.</p>
+
+            <p>There will be a table that shows all of the reimbursment requests and if one is marked urgent, 
+                it is raised to the top of the list.</p>
+
+            <p>If it is a BenCo employee viewing this page they will have two tables.
+                <br>
+                1) which will show the pending requests that they are to approve
+                <br>
+                and 2) which will show all of the requests that are "waiting for final grade"
+                which are the requests they have already approved and are now waiting for the employee
+                to enter a final grade for them to be able to complete the request and send the reimbursment
+            </p>
+
+            <div class="tableDiv">
+                <h3>Pending Tuition Reimbursement Requests</h3>
+                <table id="pendingRequestsTable" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Employee Name</th>
+                            <th>Location</th>                            
+                            <th>Event Type</th>
+                            <th>Cost</th>                            
+                            <th>Status</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No Pending Requests</td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tableDiv hidden">
+                <h3>Requests Waiting Final Grade</h3>
+                <table id="pendingRequestsTable" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Employee Name</th>
+                            <th>Location</th>                            
+                            <th>Event Type</th>                        
+                            <th>Status</th>
+                            <th>Final Grade</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>No Pending Requests</td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+
+</html>

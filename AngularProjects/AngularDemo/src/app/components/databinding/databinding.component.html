@@ -1,0 +1,98 @@
+<h1>THIS. IS. DATABINDING.</h1>
+<hr>
+<p>
+    In Angular, we can take advantage of what is referred
+    to as "databinding". Databinding entails binding data
+    from your model to your view. We can either choose to
+    bind from the back to the front or from the front to the
+    back (the back being your model and the front being your
+    view).
+</p>
+<p>
+    There are 4 ways that we can use databinding:
+</p>
+<ul>
+    <li>String Interpolation</li>
+    <li>Event Binding</li>
+    <li>Propery Binding</li>
+    <li>ngModel</li>
+</ul>
+
+<h2>String Interpolation</h2>
+<p>When using string interpolation, we can bind data from
+    the back to the front by using double curly braces: {{someProp}}
+</p>
+<p>{{bindMe}}</p>
+<p>3 + 4 + 5 + 7 = {{3+4+5+7}}</p>
+
+<h2>Event Binding</h2>
+<p id="eventBound" (click)="doStuff()">Event binding allows us to bind from the front to the
+    back. When an event occurs on our template, some funciton,
+    for example, is triggered within our model. This is similar
+    to adding an event listener in JavaScript. NOTE: that when using event binding in Angular,
+    it is syntactically proper to use parentheses around the event.
+</p>
+
+<h2 (click)="hideMe()">Property Binding</h2>
+<p [hidden]="isItHidden">
+    Property binding allows us to bind from the back to 
+    the front. This works with attributes. For instance, if a
+    paragraph has a "hidden" attribute, we can bind its value 
+    to some data in our model. The syntax we use for property
+    binding is the square brackets.
+</p>
+
+<h2>ngModel</h2>
+<p>ngModel allows us to bind from the front to the back AND from
+    the back to the front all at once Fittingly so, the syntax for
+    ngModel is a combination of the square brackets and parentheses [()].
+    In order to use ngModel we must import the FormsModule.
+</p>
+
+<input [(ngModel)]="yourFavoriteBoyband" type="text"/>
+
+<p>
+    Your favorite boy band is currently: {{yourFavoriteBoyband}}
+</p>
+
+<h2>One Way Databinding Vs Two Way Databinding</h2>
+<p>Thus far, we've covered frou ways of achieveing
+    databind. We can separate these databinding 
+    techniques in two different categories:
+</p>
+
+<ul>
+    <li>One Way Databinding</li>
+    <li>Two Way Databinding</li>
+</ul>
+
+<h3>One Way Databinding</h3>
+<p>
+    One Way Databinding binds from either the front to the
+    back or from the back to the front. In other words, it
+    binds in only one direction. Property binding, event
+    binding, and string interpolation are all examples of
+    one-way databinding.
+</p>
+
+<h3>Two Way Databinding</h3>
+<p>
+    Two Way Databinding binds from the front to the back
+    AND from the back to the front. ngModel is an example
+    of two-way databainding. It responds to some event on
+    the view and simultaneously updates the component's state,
+    sending the updated valeus of any properties back to the
+    view.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+

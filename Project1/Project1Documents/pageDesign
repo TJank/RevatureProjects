@@ -1,0 +1,13 @@
+Possible pages for the Tuition Reimbursement Management System:
+
+    1: Landing Page (index.html)
+    
+    2: Login Page (login.html)
+
+    3: Create User Page (register.html) - Might be optional
+
+    4: Reimbursement Request Form (reimbursementForm.html)
+
+    5: Pending Request Page (pending.html)
+
+    6: Home Page (home.html) - when a user logs in this is the first page they see with nav bar

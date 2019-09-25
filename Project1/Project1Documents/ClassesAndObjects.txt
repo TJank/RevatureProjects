@@ -1,0 +1,34 @@
+Classes:
+
+    Employee Class:
+
+        every user that logs in will be an instance of the employee Class
+        Fields:
+            id
+            name
+            titleid
+            title
+            availableAmount
+            email -- maybe?
+
+    Request Class:
+
+        every employee will be able to make a tuition reimbusement request which will populate an instance
+        of this class
+        Fields:
+            employeeID -- the employee's id that made the request (owner)
+            Event TypeID -- the type of event it is selected from a drop down which will have a corresponding ID
+            Event Start Date -- start date of the event being requested for
+            Event Cost -- cost of the event
+            isUrgent -- boolean determining if it is urgent. If the request is made < 2 weeks from start date then it is flagged as urgent
+            Justification -- a description provided by the employee as to why they should take this course and how it benefits work
+            Description -- the description of the course with the course id if university like HIST 101
+            Additional Info -- any additional information needed / requested by the employee's higherups
+            Time Missed -- a description of the days / time missed from work
+            Approved Status -- the status will be determined in the backend by using the employee's title / level
+            Waiting Status -- the waiting status will be determined in the backend by using the employee's title / level
+            Requested Date -- the date the request form was submitted. Will be done by the DB using current_date
+            Final Grade -- a field to be used after the request is accepted AND the course has been completed. 
+
+
+    

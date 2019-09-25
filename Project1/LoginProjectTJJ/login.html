@@ -1,0 +1,109 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Employee Login</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="login.css" />
+
+        <style>
+            #pageTitle {
+                padding-bottom: 20px;
+                padding-top: 20px;
+            }
+
+            #formDiv {
+                display: table;
+                margin: 0 auto;
+
+            }
+
+            body {
+                background-color: lavenderblush;
+            }
+
+            footer {
+                padding: 20px;
+            }
+        
+        
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md " style="background-color: darkslategray">
+                    <a style="color: darkkhaki" class="navbar-brand disabled" href="/">Employee Login</a>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a style="color: darkkhaki" href="about.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: darkkhaki;" class="disabled" href="#">Contact</a>
+                        </li>
+                        </li>
+                    </ul>
+                        
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item"><a style="color: darkkhaki" class="disabled" href="#">Sign Up</a></li>
+                    </ul>
+                </nav>
+                <h1 id="pageTitle" style="text-align: center">FlyingDutchman Employee Portal</h1>
+        </header>
+            
+
+            
+
+        <div class="container-fluid" id="formDiv">
+            <div class="row">
+                <div class="col-4"></div>
+                <div id="loginForm" class="col-4">
+                    <form>
+                        <table>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            Username: 
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="username" placeholder="username" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>
+                                            Password: 
+                                        </label> 
+                                    </td>
+        
+                                    <td>
+                                        <input type="password" name="password" placeholder="password" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="submitBtn" class="btn btn-warning form-control" type="submit" value="Login!" disabled>
+                                    </td>
+                                </tr>
+                            </table>
+                    </form>                    
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+        <div id="formDiv">
+            <h6>Trouble logging in or don't have an account?</h6>
+            <h6>Contact our HR at hr@flyingdutchman.com</h6>
+            <footer>
+                <hr>
+                <h6>Check out our facility! 1 Rocket Rd, Hawthorne, CA</h6>
+            </footer>
+        </div>
+
+        <script src="./login.js"></script>
+    </body>
+
+</html>
+</DOCTYPE>

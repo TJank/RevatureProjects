@@ -1,0 +1,62 @@
+<h2>DIRECTIVES</h2>
+<p>
+    In Angular, we have access to something called a 
+    "directive". Using directives allows us to invoke
+    Angular fucntionality without breaking our frontend.
+    Angular directives are used within our template/view. 
+    There are several types of directives, two of them 
+    being "Structural Directives" and "Attribute DIrectives"
+</p>
+<h3>Structural Directives</h3>
+<p>
+    A structural directive allows us to change the structure
+    of a template. This entails, for instance, adding or
+    removing elements from our view. Structural directives
+    provide a conenient way of performing DOM manipulation.
+    We denote that we are using structural directive by
+    using the "*" symbol.
+</p>
+
+<h4>*ngIf</h4>
+<p>ngIf is a structural directive which is used in conjuction with
+    some boolean expression/value in our model. If that expression/value
+    should evaluate to false, the element on which you are using ngIf will
+    be removed from the DOM. Else, it will be placed on the DOM.</p>
+<p *ngIf="visible">I'm a paragraph whose existance depends on ngIf</p>
+
+<p >
+    This is only displayed if the first paragraph's *ngIf="
+    evaluates to faslse;
+</p>
+
+
+<h4>*ngFor</h4>
+<p>
+    ngFor is another structural directive whihc loops over
+    a collection in our model. It is similar to an enhanced
+    for loop in JavaScript
+</p>
+
+<table *ngFor="let d of data">
+    <tbody>
+        <tr>
+            <td>This is a table. Again and again and again. This is table # {{d}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Attribute Directive</h3>
+<p>
+    Attribute directives do NOT alter the structure of a page.
+    They instead alter properites such as style. One such
+    attribute directive is called "ngSyle".
+</p>
+
+<p [ngStyle]="styleObject">This paragraph is having its style affected by ngStyle.</p>
+
+
+
+
+
+
